@@ -206,7 +206,7 @@ def main() -> int:
     else:
         test_src = reg_test.read_text()
         add(
-            f"[5] MapResourceRegistryTest.kt has maps.none { ... {target_path} } negative pin",
+            f"[5] MapResourceRegistryTest.kt has maps.none {{ ... {{{target_path}}} }} negative pin",
             has_negative_pin_for(test_src, target_path),
             f"if missing, add the assertTrue block: maps.none {{ it.equals(\"{target_path}\", ignoreCase = true) }}",
         )
